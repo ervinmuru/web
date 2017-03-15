@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e4eb2c34-aaf9-449a-8791-f1d194a05605" name="kooliserver" url="http://138.68.68.130/~/ervin.muru/">
+        <fileTransfer host="138.68.68.130" port="22" rootFolder="/home/ervin.muru/public" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
