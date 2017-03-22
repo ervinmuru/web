@@ -9,4 +9,6 @@
 //defining constants
 define('CLASSES_DIR','classes/'); // classes folder constant
 define('TMPL_DIR', 'tmpl/'); //template folder constant
+//using files
+require_once CLASSES_DIR.'template.php';
 ?>

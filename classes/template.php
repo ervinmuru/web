@@ -20,7 +20,7 @@ class template
     function __construct ($f) {
         $this->file = $f; //html template file name variable
         $this->loadFile(); //reading file content
-    }
+    }//construcor end
 
     //html template file reading
     function loadFile() {

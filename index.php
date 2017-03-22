@@ -11,4 +11,6 @@ require_once 'conf.php';
 
 // main page content
 echo '<h1>Veebiprogrammeerimine</h1>';
+
+
 ?>
