@@ -14,4 +14,8 @@ class template
     var $content = false; //html template file content
     var $vars = array(); //html view - real values
     //class actions - methods - functions
+    //reading html file comntents
+    function readFile($f) {
+        $this->content = file_put_contents($f);
+    }//readFile function end
 }//class end
