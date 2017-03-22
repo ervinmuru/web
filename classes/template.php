@@ -46,6 +46,13 @@ class template
             $this->readFile($f);
         }
 
+        //subfolder usage
+        $f = TMPL_DIR.str_replace('.','/', $this->file).'.html'; // more local replacmest
+        if (file_exists($f) and is_file($f) and is_readable($f)) {
+            //reading file contents
+            $this->readFile($f);
+        }
+
         //if file exists and is readable
         $f = TMPL_DIR.$this->file; // more local replacmest
         if (file_exists($f) and is_file($f) and is_readable($f)) {
