@@ -64,5 +64,10 @@ class template
     function readFile($f) {
         $this->content = file_get_contents($f);
     }//readFile function end
+
+    //template_element -> key_value
+    function set($name, $val) {
+        $this->vars[$name] = $val;
+    } set end
 }//class end
 ?>
