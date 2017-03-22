@@ -13,7 +13,7 @@ require_once 'conf.php';
 echo '<h1>Veebiprogrammeerimine</h1>';
 
 //creating main template object
-$main_tmpl = new template(TMPL_DIR.'main.html');
+$main_tmpl = new template('main.html');
 //controlling object contents
 echo '<pre>';
 print_r($main_tmpl);
