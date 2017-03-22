@@ -75,8 +75,9 @@ class template
         $str = $this->content;
         foreach ($this->vars as $name=>$val) {
             $str = str_replace('{'.$name.'}', $val, $str);
-            echo $str;
         }
+        //returning fully replaced template
+        return $str;
     }//parse end
 }//class end
 ?>

@@ -21,7 +21,5 @@ $main_tmpl->set('lang_bar','Language selection');
 $main_tmpl->set('menu','Page menu');
 $main_tmpl->set('content','Page content');
 //controlling object contents
-echo '<pre>';
-print_r($main_tmpl);
-echo '<pre>';
+echo $main_tmpl->parse();
 ?>
