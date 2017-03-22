@@ -23,4 +23,6 @@ $main_tmpl->set('content','Page content');
 $main_tmpl->set('site_title','Web development');
 //controlling object contents
 echo $main_tmpl->parse();
+//calling menu file
+require_once 'menu.php';
 ?>

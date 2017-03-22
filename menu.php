@@ -8,7 +8,11 @@
 //creating menu template objects
 $menu = new template('menu.menu');
 $item = new template('menu.item');
-
+//adding content
+$item->set('name', 'first');
+$menu->set('items', $item->parse());
+$item->set('name', 'second');
+$menu->set('items', $item->parse());
 echo '<pre>';
 print_r($menu);
 print_r($item);
