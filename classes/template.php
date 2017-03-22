@@ -30,11 +30,24 @@ class template
             echo 'Folder' . TMPL_DIR . 'does not exist!<br/>';
             exit;
         }
+
         //if file exists and is readable
         if (file_exists($f) and is_file($f) and is_readable($f)) {
             //reading file contents
             $this->readFile($f);
         }
+
+
+
+        //if file exists and is readable
+        $f = TMPL_DIR.$this->file; // more local replacmest
+        if (file_exists($f) and is_file($f) and is_readable($f)) {
+            //reading file contents
+            $this->readFile($f);
+        }
+
+
+
         //if content is not readable
         if ($this->content === false) {
             echo 'Can not read file'.$this->file.'<br/>';
