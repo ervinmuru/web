@@ -68,6 +68,6 @@ class template
     //template_element -> key_value
     function set($name, $val) {
         $this->vars[$name] = $val;
-    } set end
+    } //set end
 }//class end
 ?>

@@ -14,6 +14,12 @@ echo '<h1>Veebiprogrammeerimine</h1>';
 
 //creating main template object
 $main_tmpl = new template('main');
+//creating pairs template_element -> key_value
+$main_tmpl->set('user','Username');
+$main_tmpl->set('title','Main page');
+$main_tmpl->set('lang_bar','Language selection');
+$main_tmpl->set('menu','Page menu');
+$main_tmpl->set('content','Page content');
 //controlling object contents
 echo '<pre>';
 print_r($main_tmpl);
