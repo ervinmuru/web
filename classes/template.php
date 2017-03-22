@@ -16,6 +16,12 @@ class template
 
     //class actions - methods - functions
 
+    //class constructor
+    function __construct ($f) {
+        $this->file = $f; //html template file name variable
+        $this->loadFile(); //reading file content
+    }
+
     //html template file reading
     function loadFile() {
         $f = $this->file;//local replacement
@@ -41,3 +47,4 @@ class template
         $this->content = file_put_contents($f);
     }//readFile function end
 }//class end
+?>
