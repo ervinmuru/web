@@ -44,7 +44,7 @@ class template
 
     //reading html file comntents
     function readFile($f) {
-        $this->content = file_put_contents($f);
+        $this->content = file_get_contents($f);
     }//readFile function end
 }//class end
 ?>
