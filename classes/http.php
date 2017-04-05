@@ -41,5 +41,9 @@ class http
         //muidu tagastab tyhja v22rtuse
         return false;
     }
+    //lisame vajalikud v22rtused veebi kujul nimi=v22rtus
+    function set($name, $val) {
+        $this->vars[$name] = $val;
+    }
 }// klassi lõpp
 ?>
