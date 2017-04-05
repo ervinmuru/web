@@ -6,4 +6,5 @@
  * Time: 8:48 AM
  */
 
-$main_tmpl ->set('content'.'Esimene leht');
+$main_tmpl->set('content', 'Esimene leht');
+?>

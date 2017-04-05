@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: darthuser
- * Date: 4/5/17
- * Time: 9:04 AM
+ * User: anna.karutina
+ * Date: 5.04.2017
+ * Time: 9:03
  */
 $act = $http->get('act'); // küsime hetkel valitud tegevus
 // koostame otsitava faili nimi - failisüsteemi jaoks

@@ -6,3 +6,4 @@
  * Time: 9:19 AM
  */
 $main_tmpl->set('content', 'Lehe sisu');
+?>
