@@ -6,9 +6,9 @@
  * Time: 3:25 PM
  */
 
-//defining constants
-define('CLASSES_DIR','classes/'); // classes folder constant
-define('TMPL_DIR', 'tmpl/'); //template folder constant
+// defineerime vajalikud konstandid
+define('CLASSES_DIR', 'classes/'); // classes kataloogi nime konstant
+define('TMPL_DIR', 'tmpl/'); // tmpl kataloogi nime konstant
 define('LIB_DIR', 'lib/'); // lib kataloogi nime konstant
 // võtame kasutusele vajalikud abifailid
 require_once LIB_DIR.'utils.php';
@@ -19,7 +19,8 @@ require_once CLASSES_DIR.'linkobject.php';
 // loome vajalikud objektid projekti tööks
 $http = new linkobject();
 // testime linkobjecti tööd
-echo $http->baseUrl;
+echo $http->baseUrl.'<br />';
+echo $http->getLink(array('kasutaja'=>'admin', 'pass'=>'qwerty'));
 //echo '<pre>';
 //print_r($http);
 ?>

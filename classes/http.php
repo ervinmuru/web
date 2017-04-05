@@ -31,5 +31,15 @@ class http
             }
         }
     }// initConst
+
+    //saame kätte veebis olevad andmed - nagu $_POST või $_GET - emulatsioon
+    function get($name) {
+        //kui vastava nimega element eksisteerib
+        if ($this -> vars[$name]) {
+            return $this -> vars[$name];
+        }
+        //muidu tagastab tyhja v22rtuse
+        return false;
+    }
 }// klassi lõpp
 ?>
