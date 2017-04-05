@@ -10,7 +10,6 @@ $fn = ACTS_DIR.str_replace('.','/',$act).'.php';//koostame otsitava faili nimi
 
 if (file_exists($fn) and is_file($fn) and is_readable($fn)) {
     require_once $fn;
-}
-else {
-    echo 'Fail on puudu';
+} else {
+    $fn = ACTS_DIR.'default'.'.php';
 }
