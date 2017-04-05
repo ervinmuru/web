@@ -22,6 +22,6 @@ require_once 'menu.php';
 // tõstsime vaikimisi väljund default tegevuse sisse
 require_once 'act.php';
 $main_tmpl->set('site_title', 'Veebiprogrammeerimise kursus');
-// kontrollime antud objekti sisud
+// kontrollime antud objekti sisu
 echo $main_tmpl->parse();
 ?>

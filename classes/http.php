@@ -31,19 +31,20 @@ class http
             }
         }
     }// initConst
-
-    //saame kätte veebis olevad andmed - nagu $_POST või $_GET - emulatsioon
-    function get($name) {
-        //kui vastava nimega element eksisteerib
-        if ($this -> vars[$name]) {
-            return $this -> vars[$name];
+    // saame kätte veebis olevad andmed - nagu $_POST või $_GET - emulatsioon
+    // tegelikult need andmed on kas lingi kaudu saadud
+    function get($name){
+        // kui vastava nimega element eksisteerib andmete massiivis
+        if($this->vars[$name]){
+            // tagastame selle väärtus
+            return $this->vars[$name];
         }
-        //muidu tagastab tyhja v22rtuse
+        // muidu tagastame tühi väärtus
         return false;
-    }
-    //lisame vajalikud v22rtused veebi kujul nimi=v22rtus
-    function set($name, $val) {
+    }// get
+    // lisame vajalikud väärtused veebi kujul nimi=väärtus
+    function set($name, $val){
         $this->vars[$name] = $val;
-    }
+    }// set
 }// klassi lõpp
 ?>
