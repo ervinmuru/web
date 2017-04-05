@@ -54,7 +54,7 @@ class template
             echo 'Ei suutnud lugeda faili '.$this->file.'<br />';
         }
     }// loadFile
-    // loeme sisu html malli failist
+    // loeme sisu html malli failis
     function readFile($f){
         $this->content = file_get_contents($f);
     }// readFile
