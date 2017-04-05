@@ -6,23 +6,21 @@
  * Time: 1:08 PM
  */
 
-//taking configuration from conf.php
+// võtame konfiguratsiooni kasutusele
 require_once 'conf.php';
-
-// main page content
-echo '<h1>Web development</h1>';
-
-//creating main template object
+// pealehe sisu
+echo '<h1>Veebiprogrammeerimise esileht</h1>';
+// valmistame peatemplate objekti
 $main_tmpl = new template('main');
-//creating pairs template_element -> key_value
-$main_tmpl->set('user','Username');
-$main_tmpl->set('title','Page title');
-$main_tmpl->set('lang_bar','Language selection');
-$main_tmpl->set('menu','Page menu');
-$main_tmpl->set('content','Page content');
-$main_tmpl->set('site_title','Web development');
-//controlling object contents
-echo $main_tmpl->parse();
-//calling menu file
+// valmistame paarid malli_element => väärtus
+$main_tmpl->set('user', 'Kasutajanimi');
+$main_tmpl->set('title', 'Pealeht');
+$main_tmpl->set('lang_bar', 'Keeleriba');
+$main_tmpl->set('menu', 'Lehe peamenüü');
+// kutsume menüü tööle testimiseks
 require_once 'menu.php';
+$main_tmpl->set('content', 'Lehe sisu');
+$main_tmpl->set('site_title', 'Veebiprogrammeerimise kursus');
+// kontrollime antud objekti sisu
+echo $main_tmpl->parse();
 ?>
