@@ -19,6 +19,7 @@ $main_tmpl->set('lang_bar', 'Keeleriba');
 $main_tmpl->set('menu', 'Lehe peamenüü');
 // kutsume menüü tööle testimiseks
 require_once 'menu.php';
+// tõstsime vaikimisi väljund default tegevuse sisse
 require_once 'act.php';
 $main_tmpl->set('site_title', 'Veebiprogrammeerimise kursus');
 // kontrollime antud objekti sisu
