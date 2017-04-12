@@ -20,9 +20,7 @@ define('DEFAULT_LANG', 'et'); // vaikimisi keele määramine
 require_once LIB_DIR.'utils.php';
 require_once 'db_conf.php';
 
-// lisame keele tugi
-$lang_id = DEFAULT_LANG;
-$http->set('lang_id', $lang_id);
+
 
 //vaikimise keele konstant
 define('DEFAULT_LANG', 'et');
@@ -37,5 +35,8 @@ $http = new linkobject();
 $db = new mysql(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 //testime andmebaasi objekti
 
++// lisame keele tugi
++$lang_id = DEFAULT_LANG;
++$http->set('lang_id', $lang_id);
 
 ?>
