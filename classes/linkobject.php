@@ -13,6 +13,7 @@ class linkobject extends http
     var $delim = '&amp;';
     var $eq = '=';
     var $protocol = 'http://';
+    var $aie = array('lang_id', 'sid'=>'sid');
     // klassi meetodid
     // klassi konstruktor
     function __construct(){
