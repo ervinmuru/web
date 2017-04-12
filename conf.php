@@ -17,6 +17,10 @@ define('DEFAULT_ACT', 'default'); // vaikimisi tegevuse faili nime konstant
 require_once LIB_DIR.'utils.php';
 require_once 'db_conf.php';
 
+//keele toetus
+$lang_id = DEFAULT_LANG;
+$http->set('lang_id',$lang_id);
+
 //vaikimise keele konstant
 define('DEFAULT_LANG', 'et');
 
