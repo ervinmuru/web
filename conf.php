@@ -22,8 +22,7 @@ require_once 'db_conf.php';
 
 
 
-//vaikimise keele konstant
-define('DEFAULT_LANG', 'et');
+
 
 // võtame kasutusele vajalikud failid
 require_once CLASSES_DIR.'template.php';
