@@ -31,7 +31,7 @@ require_once CLASSES_DIR.'template.php';
 require_once CLASSES_DIR.'http.php';
 require_once CLASSES_DIR.'linkobject.php';
 require_once CLASSES_DIR.'mysql.php';
-
+require_once LIB_DIR.'trans.php'; // kutsume tõlkifunktsiooni asukoht
 
     );
 // loome vajalikud objektid projekti tööks
