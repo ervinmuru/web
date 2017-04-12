@@ -29,27 +29,31 @@ require_once CLASSES_DIR.'template.php';
 require_once CLASSES_DIR.'http.php';
 require_once CLASSES_DIR.'linkobject.php';
 require_once CLASSES_DIR.'mysql.php';
+
+
+    );
 // loome vajalikud objektid projekti tööks
 $http = new linkobject();
 $db = new mysql(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 //testime andmebaasi objekti
 
+// lisame keele tugi
 // lehe keelevahetuseka määratud keeled
-$sitesLangs = array(
-    	'et' => 'estonian',
-    	'en' => 'english',
-    	'ru' => 'russian'
-        );
-
- //kontrollime, milline keel on hetkel aktiivne
- $lang_id = $http->get('lang_id');
- // kontrollime, kas selline keel keelemassiivis olemas
- if(!isset($sitesLangs[$lang_id])){
-    	// kui pole - määrame vaikimisi keel
-    	$lang_id = DEFAULT_LANG;
-    	$http->set('lang_id', $lang_id);
-    }
- // määrame mugavuseks aktiivse keele konstandi
- define('LANG_ID', $lang_id);
+$siteLangs = array(
+    'et' => 'estonian',
+    'en' => 'english',
+    'ru' => 'russian'
+);
+//kontrollime, milline keel on hetkel aktiivne
+$lang_id = $http->get('lang_id');
+// kontrollime, kas selline keel keelemassiivis olemas
+if(!isset($siteLangs[$lang_id])){
+    // kui pole - määrame vaikimisi keel
+    $lang_id = DEFAULT_LANG;
+    $http->set('lang_id', $lang_id);
+}
+// määrame mugavuseks aktiivse keele konstandi
+define('LANG_ID', $lang_id);
+?>
 
 ?>

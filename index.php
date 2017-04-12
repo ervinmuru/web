@@ -17,6 +17,9 @@ $main_tmpl->set('user', 'Kasutajanimi');
 $main_tmpl->set('title', 'Pealeht');
 $main_tmpl->set('lang_bar', LANG_ID);//Kontrollitud aktiivne keel - hetkel vaikimisi määratud keel
 $main_tmpl->set('menu', 'Lehe peamenüü');
+// lisame keeleriba pealehele
++require_once 'lang.php';
+
 // kutsume menüü tööle testimiseks
 require_once 'menu.php';
 // tõstsime vaikimisi väljund default tegevuse sisse
