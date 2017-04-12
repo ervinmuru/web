@@ -41,8 +41,22 @@ class mysql
             echo '<b>.$sql.</b><br>';
             echo mysqli_error($this->conn).'<br />';
             exit;
-        }
+        }//query
         return $res;
+    }
+
+    //andmetega paringu teostamine
+    function getArray ($sql) {
+        $res = $this->query($sql);
+        $data =array();
+        while ($row = mysqli_fetch_assoc($res)) {
+            $data[] = $row;
+        }
+        if (count($data) == 0) {
+            return false;
+
+        }
+        return $data;
     }
 }
 ?>
