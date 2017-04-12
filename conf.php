@@ -15,6 +15,8 @@ define('ACTS_DIR', 'acts/'); // acts kataloogi nime konstant
 
 define('DEFAULT_ACT', 'default'); // vaikimisi tegevuse faili nime konstant
 define('DEFAULT_LANG', 'et'); // vaikimisi keele määramine
+define('LANG_DIR', 'lang/'); // lang kataloogi nime konstant
+
 
 // võtame kasutusele vajalikud abifailid
 require_once LIB_DIR.'utils.php';
