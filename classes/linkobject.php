@@ -30,7 +30,6 @@ class linkobject extends http
         }
         $link = $link.fixUrl($name).$this->eq.fixUrl($val);
     }// addToLink
-    // saame täislink valmis
     function getLink($add = array(), $aie = array(), $not = array()){
         $link = '';
         foreach($add as $name=>$val){
