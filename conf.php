@@ -16,6 +16,10 @@ define('DEFAULT_ACT', 'default'); // vaikimisi tegevuse faili nime konstant
 // võtame kasutusele vajalikud abifailid
 require_once LIB_DIR.'utils.php';
 require_once 'db_conf.php';
+
+//vaikimise keele konstant
+define('DEFAULT_LANG', 'et');
+
 // võtame kasutusele vajalikud failid
 require_once CLASSES_DIR.'template.php';
 require_once CLASSES_DIR.'http.php';
@@ -25,8 +29,6 @@ require_once CLASSES_DIR.'mysql.php';
 $http = new linkobject();
 $db = new mysql(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 //testime andmebaasi objekti
-$res = $db->getArray('select now();');
-echo '<pre>';
-print_r($res);
-echo '<pre>';
+
+
 ?>
