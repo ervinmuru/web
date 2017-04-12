@@ -10,23 +10,19 @@ $menu = new template('menu.menu');
 $item = new template('menu.item');
 // lisame sisu
 //menuu sql lause
-$sql = 'select content_id, title, from content where'.
-    'parent_id='
+$sql = 'SELECT content_id, title FROM content WHERE'.
+    ' parent_id='.fixDb(0).' AND show_in_menu='.fixDb(1);
+//saame paringu tulemus
+$res = $db->getArray($sql);
+//kontrollime tulemuse sisu
+if ($res != false) {
+    foreach ($res as $page) {
+        $item->set('name',$page['title']);
+        $link= $http->getLink(array('page_id'=>$page['content_id']));
+        $item->set('link', $link);
+        $menu->add('items', $item->parse());
+    }
+}
 
-// nimetame menüüs väljastav element
-$item->set('name', 'esimene');
-// loome antud menüü elemendile lingi
-$link = $http->getLink(array('act'=>'first'));
-// lisame antud link menüüsse
-$item->set('link', $link);
-// lisame valmis link menüü objekti sisse
-$menu->set('items', $item->parse());
-//
-$item->set('name', 'teine');
-$link = $http->getLink(array('act'=>'second'));
-$item->set('link', $link);
-$menu->add('items', $item->parse());
-// kontrollime objekti olemasolu ja sisu
-// kui soovime pidevat asendamist, siis set funktsioon add asemel
 $main_tmpl->add('menu', $menu->parse());
 ?>
