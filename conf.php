@@ -25,7 +25,7 @@ require_once CLASSES_DIR.'mysql.php';
 $http = new linkobject();
 $db = new mysql(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 //testime andmebaasi objekti
-$res = $db->query('select now();');
+$res = $db->getArray('select now();');
 echo '<pre>';
 print_r($res);
 echo '<pre>';
